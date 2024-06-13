@@ -1,0 +1,21 @@
+name: Build and test
+
+on: push
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gitleaks-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: SchoolKeep/gitleaks-workflow@main
+        with:
+          licence: ${{ secrets.GITLEAKS_LICENSE }}
+  brakeman-workflow:
+    runs-on: [self-hosted, prod-1c-4gb]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: SchoolKeep/brakeman-workflow@main
