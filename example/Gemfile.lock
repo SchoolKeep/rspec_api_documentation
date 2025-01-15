@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    rspec_api_documentation (5.1.0)
+    rspec_api_documentation (6.1.0)
       activesupport (>= 3.0.0)
       mustache (~> 1.0, >= 0.99.4)
       rspec (~> 3.0)
@@ -55,7 +55,8 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
-    i18n (0.7.0)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     json (1.8.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -64,7 +65,7 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    mustache (1.0.5)
+    mustache (1.1.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     rack (1.6.4)
